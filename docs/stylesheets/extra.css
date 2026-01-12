@@ -1,0 +1,70 @@
+/* Stable Experts Custom Palette */
+:root {
+    /* Brand Colors */
+    --se-british-green: #00241B;
+    --se-royal-gold: #D4AF37;
+    --se-pale-champagne: #F1E5AC;
+    --se-neon-green: #39FF14;
+    --se-tech-cyan: #00F5FF;
+    --se-graphite-black: #121212;
+    --se-steel-grey: #8E8E8E;
+}
+
+/* Light Mode (Default) */
+[data-md-color-scheme="default"] {
+    /* Primary header and sidebar */
+    --md-primary-fg-color: var(--se-british-green);
+    --md-primary-bg-color: #ffffff;
+
+    /* Text and background */
+    --md-default-fg-color: var(--se-graphite-black);
+    --md-default-bg-color: #ffffff;
+
+    /* Accents and Links */
+    --md-accent-fg-color: var(--se-royal-gold);
+    --md-typeset-a-color: var(--se-royal-gold);
+
+    /* Selection/Highlight */
+    --md-code-bg-color: var(--se-pale-champagne);
+
+    /* Footer */
+    --md-footer-bg-color: var(--se-british-green);
+}
+
+/* Dark Mode (Slate) */
+[data-md-color-scheme="slate"] {
+    /* Primary header and sidebar */
+    --md-primary-fg-color: var(--se-british-green);
+    --md-primary-bg-color: #FFFFFF;
+    /* Text color on primary background (Header/Sidebar text) */
+
+    /* Text and background */
+    --md-default-fg-color: #FFFFFF;
+    /* Pure white for maximum contrast */
+    --md-default-bg-color: var(--se-graphite-black);
+    --md-typeset-color: #FFFFFF;
+    /* Content text */
+    --md-heading-fg-color: #FFFFFF;
+    /* Headings */
+
+    /* Accents and Links */
+    --md-accent-fg-color: var(--se-tech-cyan);
+    --md-typeset-a-color: var(--se-tech-cyan);
+
+    /* Selection/Highlight */
+    --md-code-bg-color: #1a1a1a;
+
+    ::selection {
+        background-color: var(--se-neon-green);
+        color: var(--se-graphite-black);
+    }
+
+    /* Footer */
+    --md-footer-bg-color: #0a1812;
+    /* Darker shade of british green */
+}
+
+/* Custom override for navigation highlights if needed */
+.md-nav__item .md-nav__link--active {
+    font-weight: bold;
+}

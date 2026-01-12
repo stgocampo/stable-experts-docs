@@ -1,0 +1,82 @@
+site_name: Stable Experts Documentation
+site_url: https://stable-experts-docs.com
+
+theme:
+  name: material
+  language: es
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
+  icon:
+    logo: fontawesome/solid/horse # Updated to a valid icon relevant to the project
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
+
+  features:
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotate
+    - content.tooltips
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Use Cases:
+      - Introducción: use-cases/index.md
+      - Actores: use-cases/Actores.md
+      - Usuarios:
+          - Registro: use-cases/usuarios/UC-001_Registro.md
+          - Login: use-cases/usuarios/UC-002_Login.md
+          - Recuperación: use-cases/usuarios/UC-003_Recuperacion.md
+          - Logout: use-cases/usuarios/UC-004_Logout.md
+  - Historias de Usuario:
+      - Introducción: user-story/index.md
+      - Usuarios:
+          - Registro: user-story/usuarios/US-001_Registro.md
+          - Login: user-story/usuarios/US-002_Login.md
+          - Recuperación: user-story/usuarios/US-003_Recuperacion.md
+          - Logout: user-story/usuarios/US-004_Logout.md
+  - Core: core/index.md
+  - Architecture:
+      - Overview: architecture/index.md
+      - Componentes: architecture/components.md
+      - Contenedores: architecture/containers.md
+  - API: api/index.md
+  - Guides: guides/index.md
